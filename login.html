@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat_login</title>
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel = "stylesheet" href = "https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="main-container">
+            <div class="main-content">
+                <div class="slide-container" style="background-image:url('IG.jpeg')">
+                    <div class="slide-content" id = "slide-content">
+                        <img src = "getMicrosoft.png" alt="screen1" class="active">
+                        <img src = "playStore.png" alt="screen2">
+                        <img src = "profile.jpeg" alt="screen3">
+                        <img src = "srk.jpeg" alt="screen4">
+                        <img src = "instaLogo.png" alt="screen5">
+                        
+    
+    
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+        <div class="footer"></div>
+    </div>
+    <!-- script -->
+
+<script>
+    setInterval(()=>{changeImage();
+    },2000);
+    function changeImage(){
+        var image = document.getElementById("slide-content").getElementsByTagName("img");
+        var i=0;
+        for(i =0;i<image.length;i++){
+            var image = image[i];
+            if(image.classList.contains("active")){
+               image.classList.remove("active");
+               var nextImage = images[i+1];
+               nextImage.classList.add("active");
+            }
+        }
+
+    }
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
